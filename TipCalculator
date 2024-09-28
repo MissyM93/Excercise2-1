@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class TipCalculator {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the subtotal: ");
+        double subtotal = input.nextDouble();
+
+        System.out.print("Enter the gratuity rate (as a percentage): ");
+        double gratuityRate = input.nextDouble();
+
+        double gratuity = subtotal * (gratuityRate / 100);
+        double total = subtotal + gratuity;
+
+        System.out.printf("Gratuity: $%.2f%n", gratuity);
+        System.out.printf("Total: $%.2f%n", total);
+
+        input.close();
+    }
+}
