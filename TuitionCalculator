@@ -1,0 +1,22 @@
+public class TuitionCalculator {
+
+    public static void main(String[] args) {
+        double tuition = 10000;
+        double rate = 0.05;
+        int years = 10;
+
+        for (int i = 1; i <= years; i++) {
+            tuition += tuition * rate;
+        }
+
+        System.out.printf("Tuition in 10 years: $%.2f\n", tuition);
+
+        double totalCost = 0;
+        for (int i = 0; i < 4; i++) {
+            totalCost += tuition;
+            tuition += tuition * rate;
+        }
+
+        System.out.printf("Total cost for 4 years after the 10th year: $%.2f\n", totalCost);
+    }
+}
